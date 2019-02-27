@@ -36,4 +36,18 @@ public class UserService {
         log.debug("Created Information for User: {}", newUser);
         return newUser;
     }
+    public User verifyLogin(User testuser) {
+    	if(userRepository.existsByUsername(testuser.getUsername())){
+	    	User dbuser = userRepository.findByUsername(testuser.getUsername());
+	    	log.debug("login request sent with: {}",dbuser);
+	    	if(dbuser.getPassword().contentEquals(testuser.getPassword())) {
+	    		return dbuser;
+	    	}
+	    	return null;
+    	}
+    	else {
+    		return null;
+    	}
+    }
+    
 }
