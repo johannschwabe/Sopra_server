@@ -9,6 +9,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class User implements Serializable {
 	
@@ -19,8 +21,11 @@ public class User implements Serializable {
 	@GeneratedValue
 	private Long id;
 	
-	@Column(nullable = false) 
+	@Column(nullable = true) 
 	private String birthday;
+	
+	@Column(nullable = false)
+	private String Creationdate;
 	
 	@Column(nullable = false) 
 	private String password;
@@ -41,7 +46,12 @@ public class User implements Serializable {
 	public void setId(Long id) {
 		this.id = id;
 	}
-
+	public String getCreationdate(){
+		return Creationdate;
+	}
+	public void setCreationdate(String time) {
+		this.Creationdate=time;
+	}
 	public String getBirthday() {
 		return birthday;
 	}
