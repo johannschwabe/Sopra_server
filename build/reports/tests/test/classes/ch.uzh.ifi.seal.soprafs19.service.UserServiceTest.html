@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.459s</div>
+<div class="counter">0.487s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,62 +79,62 @@
 </thead>
 <tr>
 <td class="success">createUser</td>
-<td class="success">0.030s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">createUserSameUsername</td>
-<td class="success">0.082s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">editUser</td>
-<td class="success">0.073s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">editUserWrongToken</td>
-<td class="success">0.025s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">getInfo</td>
-<td class="success">0.027s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">getInfoWrongToken</td>
 <td class="success">0.033s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">createUserSameUsername</td>
+<td class="success">0.106s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">editUser</td>
+<td class="success">0.068s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">editUserWrongToken</td>
+<td class="success">0.026s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getInfo</td>
+<td class="success">0.029s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getInfoWrongToken</td>
+<td class="success">0.025s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">getUsers</td>
-<td class="success">0.037s</td>
+<td class="success">0.036s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getUsersWrongToken</td>
-<td class="success">0.031s</td>
+<td class="success">0.039s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">logInUser</td>
-<td class="success">0.045s</td>
+<td class="success">0.037s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">logInUserWrongPassword</td>
-<td class="success">0.023s</td>
+<td class="success">0.025s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">logOutUser</td>
-<td class="success">0.042s</td>
+<td class="success">0.050s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testInvalidToken</td>
-<td class="success">0.011s</td>
+<td class="success">0.013s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -142,10 +142,10 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2019-03-14 15:12:22.903  INFO 31354 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [ch.uzh.ifi.seal.soprafs19.service.UserServiceTest], using SpringBootContextLoader
-2019-03-14 15:12:22.905  INFO 31354 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [ch.uzh.ifi.seal.soprafs19.service.UserServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2019-03-14 15:12:22.925  INFO 31354 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2019-03-14 15:12:22.927  INFO 31354 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@612bf96f, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2cce6038, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@50b0b80, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@11329a05, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2f6ce9cd, org.springframework.test.context.transaction.TransactionalTestExecutionListener@70fc83b8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2df6d12c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@28118425, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@607b226b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@740e8c9f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6fea5c83, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4b7ecdf7]
+<pre>2019-03-14 22:35:34.584  INFO 31868 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [ch.uzh.ifi.seal.soprafs19.service.UserServiceTest], using SpringBootContextLoader
+2019-03-14 22:35:34.590  INFO 31868 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [ch.uzh.ifi.seal.soprafs19.service.UserServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-03-14 22:35:34.610  INFO 31868 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-03-14 22:35:34.612  INFO 31868 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5cfbdd23, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3771a9bd, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7d16f659, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@63cb0fc1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@615bc45e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5bddb589, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@11333495, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2a3d9475, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@15fbdc58, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@23bc4293, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2b235ded, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6d7beac0]
 birthday is setUsername is setpassword is set</pre>
 </span>
 </div>
@@ -157,7 +157,7 @@ birthday is setUsername is setpassword is set</pre>
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 5.2.1</a> at 14.03.2019, 15:12:24</p>
+<a href="http://www.gradle.org">Gradle 5.2.1</a> at 14.03.2019, 22:35:35</p>
 </div>
 </div>
 </body>
