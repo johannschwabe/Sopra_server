@@ -31,8 +31,8 @@ public class UserController {
     }
     @CrossOrigin
     @PutMapping("users/{id}")
-    boolean editProfile(@PathVariable Long id, @RequestBody User clUser) {
-    	return this.service.editProfile(id, clUser.getBirthday(), clUser.getUsername(), clUser.getPassword());
+    boolean editProfile(@PathVariable Long id, @RequestBody User clUser, @RequestHeader("Access-Token") String Token) {
+    	return this.service.editProfile(id, clUser.getBirthday(), clUser.getUsername(), clUser.getPassword(),Token);
     }
     @GetMapping("/users/{id}")
     User getInfo(@PathVariable long id,@RequestHeader("Access-Token") String Token) {

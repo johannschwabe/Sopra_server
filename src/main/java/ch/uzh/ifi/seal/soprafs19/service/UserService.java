@@ -66,25 +66,29 @@ public class UserService {
     	throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found/ incorrect password");
 
     }
-    public boolean editProfile(Long id, String birthday, String username,  String password) {
-    	var optDbUser = userRepository.findById(id);
-    	if(optDbUser.isPresent()) {
-    		User dbUser = optDbUser.get();
-	    	if(birthday!=null) {
-	    		System.out.print("birthday is set");
-	    		dbUser.setBirthday(birthday);
+    public boolean editProfile(Long id, String birthday, String username,  String password, String Token) {
+    	if(userRepository.existsById(id) && userRepository.findById(id).get().getToken().equals(Token)) {
+	    	var optDbUser = userRepository.findById(id);
+	    	if(optDbUser.isPresent()) {
+	    		User dbUser = optDbUser.get();
+		    	if(birthday!=null) {
+		    		System.out.print("birthday is set");
+		    		dbUser.setBirthday(birthday);
+		    	}
+		    	if(username!=null && !userRepository.existsByUsername(username)) {
+		    		System.out.print("Username is set");
+		    		dbUser.setUsername(username);
+		    	}
+		    	if(password!=null) {
+		    		System.out.print("password is set");
+		    		dbUser.setPassword(password);
+		    	}
+		    	return true;
 	    	}
-	    	if(username!=null && !userRepository.existsByUsername(username)) {
-	    		System.out.print("Username is set");
-	    		dbUser.setUsername(username);
-	    	}
-	    	if(password!=null) {
-	    		System.out.print("password is set");
-	    		dbUser.setPassword(password);
-	    	}
-	    	return true;
+	    	throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found");
+
     	}
-    	throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found");
+    	throw new ResponseStatusException(HttpStatus.FORBIDDEN, "You can edit only your own Profile");
 
     }
     public User getInfo(Long id, String Token) {
